@@ -1,0 +1,32 @@
+/* FONTS */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&family=Yellowtail&display=swap");
+
+/* BASE */
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Montserrat, Verdana;
+  scroll-behavior: smooth;
+}
+
+/* SCROLLBAR STYLES */
+::-webkit-scrollbar {
+  width: 10px;
+  border-radius: 25px;
+}
+
+::-webkit-scrollbar-track {
+  background: white;
+}
+
+::-webkit-scrollbar-thumb {
+  background: burlywood;
+  border-radius: 30px;
+}
+
+/* HERO SECTION */
+.hero-section{ 
+  background: url(https://i.ibb.co/GHN1C5c/hero-banner.jpg);
+  height: 200vh;
+  background-size: cover;
+}
