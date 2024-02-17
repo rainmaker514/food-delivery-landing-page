@@ -27,6 +27,97 @@
 /* HERO SECTION */
 .hero-section{ 
   background: url(https://i.ibb.co/GHN1C5c/hero-banner.jpg);
-  height: 200vh;
+  height: 100vh;
   background-size: cover;
+  padding: 16px;
+  
+}
+
+/* NAVBAR SECTION */
+nav{
+  font-size: 1.2rem;
+  position: fixed;
+  width: 100%;
+}
+
+.navbar-logo-link{
+  text-decoration: none;
+  color: white;
+}
+
+.navbar-logo{
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 2rem;
+  letter-spacing: 3px;
+  float: left;
+}
+
+.navbar-menu{
+  display: flex;
+  list-style: none;
+  flex-direction: column;
+  max-height: 0;
+  overflow: hidden;
+}
+
+/* MOBILE MENU ICON */
+.mobile-menu-icon{
+  float: right;
+  z-index: 3;
+  padding: 15px 30px;
+}
+
+.mobile-menu-icon .navicon{
+  background: white;
+  display: block;
+  position: relative;
+  width: 30px;
+  height: 5px;
+  border-radius: 100px;
+}
+
+.mobile-menu-icon .navicon::before,
+.mobile-menu-icon .navicon::after {
+  background: white;
+  content: "";
+  display: block;
+  height: 100%;
+  position: absolute;
+  transition: all 0.2s ease-out;
+  width: 100%;
+  border-radius: 100px;
+}
+
+.mobile-menu-icon .navicon::before {
+  top: 10px;
+}
+
+.mobile-menu-icon .navicon::after {
+  top: -10px;
+}
+
+/* MOBILE MENU TOGGLE BUTTON */
+.mobile-menu-toggle {
+  display: none;
+}
+
+.mobile-menu-toggle:checked ~ .navbar-menu {
+  max-height: 240px;
+}
+
+.mobile-menu-toggle:checked ~ .mobile-menu-icon .navicon {
+  background: transparent !important;
+}
+
+.mobile-menu-toggle:checked ~ .mobile-menu-icon .navicon::before {
+  transform: rotate(-45deg);
+}
+
+.mobile-menu-toggle:checked ~ .mobile-menu-icon .navicon::after {
+  transform: rotate(45deg);
+}
+
+.mobile-menu-toggle:checked ~ .mobile-menu-icon:not(.steps) .navicon::before,
+.mobile-menu-toggle:checked ~ .mobile-menu-icon:not(.steps) .navicon::after {
+  top: 0;
 }
