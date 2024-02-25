@@ -27,20 +27,26 @@
 
 #overlay {
   position: fixed;
-  display: none;
   width: 100%;
   height: 100%;
   top: 0;
   left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(0, 0, 0, 0.5);
+  display: block;
+  background-color: rgba(0, 0, 0, 0.5); 
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+#overlay.active{
+  opacity: 1;
+  visibility: visible;
 }
 
 /* HERO SECTION */
 .hero-section {
   background: url(https://i.ibb.co/GHN1C5c/hero-banner.jpg);
-  height: 200vh;
+  height: 100vh;
   background-size: cover;
 }
 
