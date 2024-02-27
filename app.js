@@ -6,7 +6,8 @@ const mobileMenuIcon = document.getElementById("mobile-menu-icon");
 
 //DISPLAYS OVERLAY WHEN ICON IS CLICKED
 mobileMenuIcon.addEventListener("click", () => {
-  overlay.classList.toggle('active');
+  overlay.classList.toggle("active");
+  navbarMenu.classList.toggle("active");
 });
 
 //COLLAPSES NAVBAR-MENU AND REMOVES OVERLAY WHEN IN MOBILE VIEW AND MOBILE-MENU-TOGGLE CHECKBOX IS CHECKED
@@ -15,7 +16,10 @@ navbarLinks.forEach((navbarLink) => {
     console.log(mobileMenuToggle.checked);
     if (window.innerWidth < 960 && mobileMenuToggle.checked == true) {
       overlay.classList.toggle("active");
+      navbarMenu.classList.toggle("active");
       mobileMenuToggle.checked = false;
     }
   });
 });
+
+
