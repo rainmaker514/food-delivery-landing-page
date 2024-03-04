@@ -33,21 +33,25 @@
   left: 0;
   display: block;
   background-color: rgba(0, 0, 0, 0.5);
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 0.5s ease, visibility 0.5s ease;
+  /* opacity: 0; */
+  /* visibility: hidden; */
+  /* transition: opacity 1.5s ease-in-out, visibility 1.5s ease-in-out; */
+  transition: all 1s ease-in-out;
 }
 
-#overlay.active {
-  opacity: 1;
-  visibility: visible;
+#overlay.active{
+  /* opacity: 1;
+  visibility: visible; */
+  background-color: rgba(0, 0, 0, 0.7);
 }
 
-/* HERO SECTION */
-.hero-section {
+.wrapper{
   background: url(https://i.ibb.co/GHN1C5c/hero-banner.jpg);
-  height: 100vh;
   background-size: cover;
+}
+
+.wrapper div{
+  transition: all 0.4s ease-in-out;
 }
 
 /* NAVBAR SECTION */
@@ -56,7 +60,6 @@ nav {
   position: fixed;
   width: 100%;
   z-index: 3;
-  height: 500px;
 }
 
 .navbar-logo-link {
@@ -133,6 +136,17 @@ nav {
   font-size: 1.5rem !important;
 }
 
+button{
+  width: 150px;
+  height: 50px;
+  border-radius: 10px;
+  background-color: goldenrod;
+  font-size: 15px;
+  font-weight: bolder;
+  border: white 1px;
+  text-decoration: none;
+}
+
 /* MOBILE MENU ICON */
 .mobile-menu-icon {
   float: right;
@@ -194,3 +208,29 @@ nav {
 .mobile-menu-toggle:checked ~ .mobile-menu-icon:not(.steps) .navicon::after {
   top: 0;
 }
+
+/* HERO SECTION */
+.hero-section {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding-inline: 8vw;
+}
+
+.hero-text{
+  position: relative;
+  top: -50px;
+  width: 100%;
+  color: white;
+}
+
+.hero-title{
+  font-size: 1.8em;
+  font-weight: 100 !important;
+  padding-bottom: 1em;
+}
+
+
