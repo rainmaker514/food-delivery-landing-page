@@ -136,7 +136,7 @@ nav {
   font-size: 1.5rem !important;
 }
 
-button{
+button, .hero-button{
   width: 150px;
   height: 50px;
   border-radius: 10px;
@@ -232,5 +232,11 @@ button{
   font-weight: 100 !important;
   padding-bottom: 1em;
 }
+
+.hero-button{
+  transition: all 1s ease-in-out;
+}
+
+
 
 

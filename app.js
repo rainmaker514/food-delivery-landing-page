@@ -4,6 +4,7 @@ const navbarMenu = document.getElementById("navbar-menu");
 const overlay = document.getElementById("overlay");
 const mobileMenuIcon = document.getElementById("mobile-menu-icon");
 const text = document.querySelector(".wrapper div");
+const button = document.querySelector(".hero-button");
 
 //DISPLAYS OVERLAY WHEN ICON IS CLICKED
 mobileMenuIcon.addEventListener("click", () => {
@@ -11,8 +12,10 @@ mobileMenuIcon.addEventListener("click", () => {
   navbarMenu.classList.toggle("active");
   if (overlay.classList.contains("active")) {
     text.style.color = "rgba(255, 255, 255, 0.1)";
+    button.style.backgroundColor = "rgba(255, 255, 255, 0.1)";
   } else {
     text.style.color = "white";
+    button.style.backgroundColor = "goldenrod";
   }
 });
 
@@ -30,5 +33,6 @@ function toggleNavbarMenu() {
   navbarMenu.classList.toggle("active");
   overlay.classList.toggle("active");
   text.style.color = "white";
+  button.style.backgroundColor = "goldenrod";
   mobileMenuToggle.checked = false;
 }
