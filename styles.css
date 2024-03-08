@@ -50,16 +50,17 @@
   background-size: cover;
 }
 
-.wrapper div{
-  transition: all 0.4s ease-in-out;
-}
-
 /* NAVBAR SECTION */
 nav {
   font-size: 1.2rem;
   position: fixed;
   width: 100%;
   z-index: 3;
+}
+
+.navbar{
+  background-color: transparent;
+  height: 70px;
 }
 
 .navbar-logo-link {
@@ -220,11 +221,12 @@ button, .hero-button{
   padding-inline: 8vw;
 }
 
-.hero-text{
+#hero-text{
   position: relative;
-  top: -50px;
+  /* top: -50px; */
   width: 100%;
   color: white;
+  transition: all 1s ease-in-out;
 }
 
 .hero-title{
@@ -233,10 +235,17 @@ button, .hero-button{
   padding-bottom: 1em;
 }
 
+.hero-subtext p{
+  padding-bottom: 2em;
+}
+
 .hero-button{
   transition: all 1s ease-in-out;
 }
 
-
-
+/* ABOUT SECTION */
+.about-section{
+  background-color: white;
+  height: 100vh;
+}
 

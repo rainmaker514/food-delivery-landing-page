@@ -3,7 +3,7 @@ const navbarLinks = document.querySelectorAll(".navbar-links");
 const navbarMenu = document.getElementById("navbar-menu");
 const overlay = document.getElementById("overlay");
 const mobileMenuIcon = document.getElementById("mobile-menu-icon");
-const text = document.querySelector(".wrapper div");
+const text = document.getElementById("hero-text");
 const button = document.querySelector(".hero-button");
 
 //DISPLAYS OVERLAY WHEN ICON IS CLICKED
@@ -36,3 +36,14 @@ function toggleNavbarMenu() {
   button.style.backgroundColor = "goldenrod";
   mobileMenuToggle.checked = false;
 }
+
+// CHANGE NAVBAR BACKGROUND ON SCROLL
+document.addEventListener("DOMContentLoaded", function () {
+  const navbar = document.getElementById("navbar");
+  const originalColor = window.getComputedStyle(navbar).backgroundColor;
+
+  window.addEventListener("scroll", function () {
+    if (this.window.scrollY > 0) navbar.style.backgroundColor = "black";
+    else navbar.style.backgroundColor = originalColor;
+  });
+});
