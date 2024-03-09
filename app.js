@@ -1,6 +1,7 @@
 const mobileMenuToggle = document.getElementById("mobile-menu-toggle");
 const navbarLinks = document.querySelectorAll(".navbar-links");
 const navbarMenu = document.getElementById("navbar-menu");
+const overlayHero = document.getElementById("overlay-hero");
 const overlay = document.getElementById("overlay");
 const mobileMenuIcon = document.getElementById("mobile-menu-icon");
 const text = document.getElementById("hero-text");
@@ -8,9 +9,10 @@ const button = document.querySelector(".hero-button");
 
 //DISPLAYS OVERLAY WHEN ICON IS CLICKED
 mobileMenuIcon.addEventListener("click", () => {
+  overlayHero.classList.toggle("active");
   overlay.classList.toggle("active");
   navbarMenu.classList.toggle("active");
-  if (overlay.classList.contains("active")) {
+  if (overlayHero.classList.contains("active")) {
     text.style.color = "rgba(255, 255, 255, 0.1)";
     button.style.backgroundColor = "rgba(255, 255, 255, 0.1)";
   } else {
@@ -31,6 +33,7 @@ navbarLinks.forEach((navbarLink) => {
 
 function toggleNavbarMenu() {
   navbarMenu.classList.toggle("active");
+  overlayHero.classList.toggle("active");
   overlay.classList.toggle("active");
   text.style.color = "white";
   button.style.backgroundColor = "goldenrod";

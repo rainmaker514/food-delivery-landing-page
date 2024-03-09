@@ -25,29 +25,41 @@
   border-radius: 30px;
 }
 
-#overlay {
-  position: fixed;
+#overlay-hero {
+  position: absolute;
   width: 100%;
   height: 100%;
   top: 0;
   left: 0;
   display: block;
   background-color: rgba(0, 0, 0, 0.5);
-  /* opacity: 0; */
-  /* visibility: hidden; */
-  /* transition: opacity 1.5s ease-in-out, visibility 1.5s ease-in-out; */
   transition: all 1s ease-in-out;
 }
 
-#overlay.active{
-  /* opacity: 1;
-  visibility: visible; */
+#overlay-hero.active, #overlay.active{
   background-color: rgba(0, 0, 0, 0.7);
 }
 
-.wrapper{
+#overlay{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  display: block;
+  /* background-color: rgba(0, 0, 0, 0.5); */
+  transition: all 1s ease-in-out;
+}
+
+.wrapper-hero{
   background: url(https://i.ibb.co/GHN1C5c/hero-banner.jpg);
   background-size: cover;
+  height: 100vh;
+  position: relative;
+}
+
+.wrapper{
+  position: relative;
 }
 
 /* NAVBAR SECTION */
@@ -249,3 +261,7 @@ button, .hero-button{
   height: 100vh;
 }
 
+/* TESTIMONIALS SECTION */
+.testimonials-section{
+  height: 100vh;
+}
