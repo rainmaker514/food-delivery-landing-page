@@ -266,7 +266,6 @@ button:hover {
 
 #hero-text {
   position: relative;
-  /* top: -50px; */
   width: 100%;
   color: white;
   transition: all 1s ease-in-out;
@@ -289,7 +288,24 @@ button:hover {
 /* ABOUT SECTION */
 .about-section {
   background-color: white;
+  position: relative;
   height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+  padding-inline: 8vw;
+}
+
+.about-text{
+  position: relative;
+  width: 100%;
+}
+
+.about-title{
+  font-size: 2rem;
+  text-align: center;
+  padding-top: 1em;
 }
 
 /* TESTIMONIALS SECTION */
@@ -339,7 +355,7 @@ button:hover {
 
   .navbar-item {
     all: unset;
-    
+
     /* padding: 0 16px 0 16px; */
   }
 
@@ -367,11 +383,30 @@ button:hover {
     font-size: 3rem;
   }
 
-  .navbar-item a{
+  .navbar-item a {
     font-size: 1.5rem !important;
   }
 
   .hero-title {
     font-size: 4.5rem;
+  }
+}
+
+@media only screen and (max-height: 575.98px) and (orientation: landscape) {
+  .wrapper-hero {
+    height: 150vh;
+  }
+
+  .hero-section {
+    top: 100px;
+  }
+
+  .navbar-menu{
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .navbar-links{
+    font-size: 1.2rem !important;
   }
 }
