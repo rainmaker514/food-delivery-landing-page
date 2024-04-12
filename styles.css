@@ -21,7 +21,7 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  background: burlywood;
+  background: goldenrod;
   border-radius: 30px;
 }
 
@@ -47,6 +47,7 @@
   height: 100%;
   top: 0;
   left: 0;
+  z-index: 2;
   display: block;
   /* background-color: rgba(0, 0, 0, 0.5); */
   transition: all 1s ease-in-out;
@@ -92,7 +93,6 @@ nav {
   display: flex;
   list-style: none;
   flex-direction: column;
-  /* overflow: hidden; */
   align-items: center;
   height: 100% !important;
   clear: both;
@@ -287,14 +287,13 @@ button:hover {
 
 /* ABOUT SECTION */
 .about-section {
-  background-color: white;
   position: relative;
-  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-items: center;
   align-items: center;
   padding-inline: 8vw;
+  padding-top: 4em;
 }
 
 .about-text{
@@ -308,9 +307,42 @@ button:hover {
   padding-top: 1em;
 }
 
+.about-sub p{
+  padding-top: 1em;
+  text-align: center;
+}
+
+.about-cols{
+  padding-top: 2em;
+  display: flex;
+  flex-direction: column;
+}
+
+.about-item{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.about-item p{
+  padding-bottom: 0.5em;
+}
+
+.about-img{
+  width: 100px;
+  height: auto;
+  padding: 1em 0 1em 0;
+}
+
 /* TESTIMONIALS SECTION */
-.testimonials-section {
+.testimonial-section {
+  background: url(https://i.ibb.co/zG3F3CM/wood.jpg);
+  background-size: cover;
+  margin-top: 2em;
   height: 100vh;
+  position: relative;
 }
 
 /* MEDIA QUERY SECTION */
@@ -321,6 +353,10 @@ button:hover {
 
   .hero-sub {
     font-size: 1.5rem;
+  }
+
+  .about-cols{
+    flex-direction: row;
   }
 }
 
@@ -355,8 +391,6 @@ button:hover {
 
   .navbar-item {
     all: unset;
-
-    /* padding: 0 16px 0 16px; */
   }
 
   .navbar-logo {
@@ -376,19 +410,23 @@ button:hover {
   #hero-text {
     padding-top: 3em;
   }
+
+  .about-title{
+    font-size: 3rem;
+  }
 }
 
 @media screen and (min-width: 1269px) {
   .navbar-logo {
-    font-size: 3rem;
+    font-size: 2.5rem;
   }
 
   .navbar-item a {
-    font-size: 1.5rem !important;
+    font-size: 1.3rem !important;
   }
 
   .hero-title {
-    font-size: 4.5rem;
+    font-size: 3.5rem;
   }
 }
 
