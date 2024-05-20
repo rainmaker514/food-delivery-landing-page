@@ -46,16 +46,18 @@ nav {
 .logo {
   text-decoration: none;
   color: white;
-  transition: all 0.2s ease;
+  transition: all 0.4s ease;
 }
 
-.logo:hover, .navbar-item:hover, .navbar-link:hover {
+.logo:hover,
+.navbar-item:hover,
+.navbar-link:hover {
   color: goldenrod;
   transform: scale(1.1);
 }
 
-.logo h3{
-  font-family: 'Times New Roman', Times, serif;
+.logo h3 {
+  font-family: "Times New Roman", Times, serif;
   font-size: 2rem;
   letter-spacing: 3px;
 }
@@ -66,15 +68,15 @@ nav {
   list-style: none;
 }
 
-.navbar-item{
-  transition: all 0.2s ease;
+.navbar-item {
+  transition: all 0.4s ease;
 }
 
 .navbar-link {
   text-decoration: none;
   color: white;
   font-size: 1rem;
-  transition: all 0.2s ease;
+  transition: all 0.4s ease;
 }
 
 .order-button {
@@ -94,11 +96,53 @@ nav {
 @media screen and (max-width: 768px) {
   .navbar-menu {
     display: none;
-  }  
+  }
+
+  /* MOBILE MENU ICON */
+  .mobile-menu-icon {
+    float: right;
+  }
+
+  .mobile-menu-icon .navicon:hover,
+  .mobile-menu-icon .navicon:hover::before,
+  .mobile-menu-icon .navicon:hover::after {
+    cursor: pointer;
+    background-color: goldenrod;
+  }
+
+  .mobile-menu-icon .navicon {
+    background: white;
+    display: block;
+    position: relative;
+    width: 30px;
+    height: 5px;
+    border-radius: 100px;
+    transition: all 0.4s ease;
+  }
+
+  .mobile-menu-icon .navicon::before,
+  .mobile-menu-icon .navicon::after {
+    background: white;
+    content: "";
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all 0.4s ease;
+    width: 100%;
+    border-radius: 100px;
+  }
+
+  .mobile-menu-icon .navicon::before {
+    top: 10px;
+  }
+
+  .mobile-menu-icon .navicon::after {
+    top: -10px;
+  }
 }
 
 @media screen and (min-width: 960px) {
-  .logo h3{
+  .logo h3 {
     font-size: 3rem;
   }
 
