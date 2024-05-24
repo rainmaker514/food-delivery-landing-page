@@ -31,8 +31,17 @@ header {
 }
 
 .wrapper {
-  max-width: 1200px;
+  width: 80%;
   margin: 0 auto;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
 }
 
 /* NAVBAR SECTION */
@@ -106,15 +115,35 @@ nav {
   display: none;
 }
 
+/* HERO SECTION */
+.hero-section {
+  display: flex;
+  /* position: relative; */
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  color: white;
+  text-align: center;
+}
+
+.hero-text {
+  z-index: 1;
+}
+
+.hero-title {
+  font-size: 4rem;
+  text-transform: capitalize;
+}
+
+.hero-sub {
+  font-size: 1.5rem;
+}
+
 /* MEDIA QUERIES */
 @media screen and (max-width: 768px) {
   /* MOBILE NAVBAR MENU */
   .navbar-menu {
-    /* position: absolute;
-    display: flex;
-    flex-direction: column;
-    
-    transition: transform 0.3s ease; */
     display: none;
   }
 
@@ -124,17 +153,12 @@ nav {
     width: 100%;
     top: 0;
     left: 100%;
+    z-index: 1;
     background-color: rgba(0, 0, 0, 0.5);
     display: flex;
     justify-content: center;
     align-items: center;
     transition: all 0.4s ease;
-    /* opacity: 0.9; */
-    /* z-index: 2; */
-    /* display: flex; */
-    /* justify-content: center; */
-    /* align-items: center; */
-    /* display: flex; */
   }
   
   .mobile-menu-container.active {
@@ -154,37 +178,6 @@ nav {
   .mobile-menu .navbar-link{
     font-size: 1.5rem;
   }
-
-  /* .navbar-menu.active .navbar-item {
-    opacity: 1;
-    transform: translateX(0);
-  } */
-
-  /* .navbar-item {
-    opacity: 0;
-    transform: translateX(-100%);
-    transition: opacity 0.3s ease, transform 0.3s ease;
-  } */
-
-  /* .navbar-item:nth-child(1) {
-    transition-delay: 0.1s;
-  }
-
-  .navbar-item:nth-child(2) {
-    transition-delay: 0.2s;
-  }
-
-  .navbar-item:nth-child(3) {
-    transition-delay: 0.3s;
-  }
-
-  .navbar-item:nth-child(4) {
-    transition-delay: 0.4s;
-  }
-
-  .navbar-item:nth-child(5) {
-    transition-delay: 0.5s;
-  } */
 
   /* MOBILE MENU ICON */
   .mobile-menu-icon {
@@ -259,234 +252,7 @@ nav {
   }
 }
 
-/*#overlay-hero {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  display: block;
-  background-color: rgba(0, 0, 0, 0.5);
-  transition: all 1s ease-in-out;
-}
-
-#overlay-hero.active,
-#overlay.active {
-  background-color: rgba(0, 0, 0, 0.7);
-}
-
-#overlay {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  z-index: 2;
-  display: block;
-  transition: all 1s ease-in-out;
-}
-
-.wrapper-hero {
-  background: url(https://i.ibb.co/GHN1C5c/hero-banner.jpg);
-  background-size: cover;
-  height: 100vh;
-  position: relative;
-}
-
-.wrapper {
-  position: relative;
-} */
-
-/* NAVBAR SECTION */
-/* nav {
-  font-size: 1.2rem;
-  position: fixed;
-  width: 100%;
-  z-index: 3;
-}
-
-.navbar {
-  height: 70px;
-}
-
-.navbar-logo-link {
-  text-decoration: none;
-  color: white;
-}
-
-.navbar-logo {
-  font-family: "Times New Roman", Times, serif;
-  font-size: 2rem;
-  letter-spacing: 3px;
-  float: left;
-  padding: 16px;
-}
-
-.navbar-menu {
-  display: flex;
-  list-style: none;
-  flex-direction: column;
-  align-items: center;
-  height: 100% !important;
-  clear: both;
-  width: 100%;
-}
-
-.navbar-menu.active .navbar-item {
-  opacity: 1;
-  transform: translateX(0);
-}
-
-.navbar-menu.active .navbar-item a,
-.navbar-menu.active .navbar-item button {
-  pointer-events: all;
-}
-
-.navbar-item a {
-  padding: 8px;
-  display: block;
-  pointer-events: none;
-  transition: all 0.2s ease-out;
-  transform-origin: center bottom;
-}
-
-.navbar-item button {
-  pointer-events: none;
-}
-
-.navbar-item {
-  opacity: 0;
-  transform: translateX(-100%);
-  transition: opacity 0.3s ease, transform 0.3s ease;
-}
-
-.navbar-item a:hover {
-  transform: scale(1.12);
-}
-
-.navbar-item:nth-child(1) {
-  transition-delay: 0.1s;
-}
-
-.navbar-item:nth-child(2) {
-  transition-delay: 0.2s;
-}
-
-.navbar-item:nth-child(3) {
-  transition-delay: 0.3s;
-}
-
-.navbar-item:nth-child(4) {
-  transition-delay: 0.4s;
-}
-
-.navbar-item:nth-child(5) {
-  transition-delay: 0.5s;
-}
-
-.navbar-item:nth-child(6) {
-  transition-delay: 0.6s;
-}
-
-.navbar-links {
-  color: white;
-  padding: 20px 20px;
-  height: 100%;
-  display: block;
-  text-decoration: none;
-  font-size: 1.5rem !important;
-}
-
-button,
-.hero-button {
-  width: 150px;
-  height: 50px;
-  border-radius: 10px;
-  background-color: goldenrod;
-  font-size: 15px;
-  font-weight: bolder;
-  border: white 1px;
-  text-decoration: none;
-  transition: all 0.2s ease-out !important;
-  transform-origin: center bottom;
-}
-
-button:hover {
-  cursor: pointer;
-  transform: scale(1.12);
-}
-
-.navbar-button {
-  margin: 10px 10px;
-} */
-
-/* MOBILE MENU ICON */
-/* .mobile-menu-icon {
-  float: right;
-  z-index: 3;
-  padding: 30px 20px;
-}
-
-.mobile-menu-icon:hover {
-  cursor: pointer;
-}
-
-.mobile-menu-icon .navicon {
-  background: white;
-  display: block;
-  position: relative;
-  width: 30px;
-  height: 5px;
-  border-radius: 100px;
-}
-
-.mobile-menu-icon .navicon::before,
-.mobile-menu-icon .navicon::after {
-  background: white;
-  content: "";
-  display: block;
-  height: 100%;
-  position: absolute;
-  transition: all 0.2s ease-out;
-  width: 100%;
-  border-radius: 100px;
-}
-
-.mobile-menu-icon .navicon::before {
-  top: 10px;
-}
-
-.mobile-menu-icon .navicon::after {
-  top: -10px;
-} */
-
-/* MOBILE MENU TOGGLE BUTTON */
-/* .mobile-menu-toggle {
-  display: none;
-}
-
-.mobile-menu-toggle:checked ~ .navbar-menu {
-  max-height: 300px;
-}
-
-.mobile-menu-toggle:checked ~ .mobile-menu-icon .navicon {
-  background: transparent !important;
-}
-
-.mobile-menu-toggle:checked ~ .mobile-menu-icon .navicon::before {
-  transform: rotate(-45deg);
-}
-
-.mobile-menu-toggle:checked ~ .mobile-menu-icon .navicon::after {
-  transform: rotate(45deg);
-}
-
-.mobile-menu-toggle:checked ~ .mobile-menu-icon:not(.steps) .navicon::before,
-.mobile-menu-toggle:checked ~ .mobile-menu-icon:not(.steps) .navicon::after {
-  top: 0;
-} */
-
-/* HERO SECTION */
+/*HERO SECTION */
 /* .hero-section {
   display: flex;
   position: relative;

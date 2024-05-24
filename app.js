@@ -1,10 +1,8 @@
-// const mobileMenuToggle = document.getElementById("mobile-menu-toggle");
-// const navbarLinks = document.querySelectorAll(".navbar-links");
+const navbarLinks = document.querySelectorAll(".mobile-menu .navbar-link, .mobile-menu .order-button");
 const navbarMenu = document.getElementById("navbar-menu");
-// const overlayHero = document.getElementById("overlay-hero");
-// const overlay = document.getElementById("overlay");
 const mobileMenuIcon = document.getElementById("mobile-menu-icon");
 const mobileMenuContainer = document.getElementById("mobile-menu-container");
+const mobileMenuToggle = document.getElementById("mobile-menu-toggle");
 // const heroText = document.getElementById("hero-text");
 // const button = document.querySelector(".hero-button");
 
@@ -13,24 +11,13 @@ mobileMenuIcon.addEventListener("click", () => {
   mobileMenuContainer.classList.toggle("active");
 });
 
-//COLLAPSES NAVBAR-MENU AND REMOVES OVERLAY WHEN IN MOBILE VIEW AND MOBILE-MENU-TOGGLE CHECKBOX IS CHECKED
-// navbarLinks.forEach((navbarLink) => {
-//   navbarLink.addEventListener("click", () => {
-//     console.log(mobileMenuToggle.checked);
-//     if (window.innerWidth < 960 && mobileMenuToggle.checked == true) {
-//       toggleNavbarMenu();
-//     }
-//   });
-// });
-
-// function toggleNavbarMenu() {
-//   navbarMenu.classList.toggle("active");
-//   overlayHero.classList.toggle("active");
-//   overlay.classList.toggle("active");
-//   heroText.style.color = "white";
-//   button.style.backgroundColor = "goldenrod";
-//   mobileMenuToggle.checked = false;
-// }
+//COLLAPSES MOBILE MENU WHEN LINK IS CLICKED
+navbarLinks.forEach((navbarLink) => {
+  navbarLink.addEventListener("click", () => {
+    mobileMenuContainer.classList.toggle("active");
+    mobileMenuToggle.checked = false;
+  });
+});
 
 // // CHANGE NAVBAR BACKGROUND ON SCROLL
 // document.addEventListener("DOMContentLoaded", function () {
