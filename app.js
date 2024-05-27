@@ -3,8 +3,7 @@ const navbarMenu = document.getElementById("navbar-menu");
 const mobileMenuIcon = document.getElementById("mobile-menu-icon");
 const mobileMenuContainer = document.getElementById("mobile-menu-container");
 const mobileMenuToggle = document.getElementById("mobile-menu-toggle");
-// const heroText = document.getElementById("hero-text");
-// const button = document.querySelector(".hero-button");
+const nav = document.querySelector("nav");
 
 //DISPLAYS OVERLAY WHEN ICON IS CLICKED
 mobileMenuIcon.addEventListener("click", () => {
@@ -19,13 +18,11 @@ navbarLinks.forEach((navbarLink) => {
   });
 });
 
-// // CHANGE NAVBAR BACKGROUND ON SCROLL
-// document.addEventListener("DOMContentLoaded", function () {
-//   const nav = document.getElementById("nav");
-//   const originalColor = window.getComputedStyle(nav).backgroundColor;
-
-//   window.addEventListener("scroll", function () {
-//     if (this.window.scrollY > 0) nav.style.backgroundColor = "black";
-//     else nav.style.backgroundColor = originalColor;
-//   });
-// });
+// CHANGE NAVBAR BACKGROUND ON SCROLL
+window.addEventListener("scroll", () => {
+  if(window.scrollY > 60) {
+    nav.classList.add("scrolled");
+  } else {
+    nav.classList.remove("scrolled");
+  }
+});
