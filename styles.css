@@ -58,7 +58,7 @@ nav {
 nav.scrolled {
   background-color: black;
   box-shadow: 0 16px 14px -8px rgba(0, 0, 0, 0.3);
-  border-radius: 0 0 8px 8px;
+  border-radius: 0 0 20px 20px;
 }
 
 .navbar{
@@ -175,18 +175,19 @@ span{
 
 .about-section {
   display: flex;
-  /* position: relative; */
+  position: relative;
   flex-direction: column;
   justify-content: center;
   /* align-items: center; */
   /* padding-top: 2em; */
-  height: 100vh;
+  /* height: 100vh; */
   text-align: center;
   width: 100%;
 }
 
 .about-text {
-  padding: 4em;
+  padding-top: 4em;
+  position: relative;
 }
 
 .about-title {
@@ -198,10 +199,12 @@ span{
 .about-cols {
   display: flex;
   padding-top: 2em;
+  /* justify-content: center; */
+  align-items: center;
 }
 
 .about-item p{
-  padding: 1em;
+  padding-top: 1em;
 }
 
 .about-img {
@@ -216,6 +219,12 @@ span{
 
   .hero-sub {
     font-size: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 804px) {
+  .hero-title {
+    font-size: 2.5rem;
   }
 }
 
@@ -322,7 +331,7 @@ span{
   }
 
   .hero-title {
-    font-size: 3rem;
+    /* font-size: 3rem; */
     margin: 20px 20px;
   }
 
@@ -338,6 +347,16 @@ span{
 
   .navbar-link {
     font-size: 1.2rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .about-cols {
+    flex-direction: column;
+  }
+
+  .about-item {
+    width: 300px;
   }
 }
 
