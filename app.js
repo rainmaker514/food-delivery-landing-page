@@ -1,4 +1,6 @@
-const navbarLinks = document.querySelectorAll(".mobile-menu .navbar-link, .mobile-menu .order-button");
+const navbarLinks = document.querySelectorAll(
+  ".mobile-menu .navbar-link, .mobile-menu .order-button"
+);
 const navbarMenu = document.getElementById("navbar-menu");
 const mobileMenuIcon = document.getElementById("mobile-menu-icon");
 const mobileMenuContainer = document.getElementById("mobile-menu-container");
@@ -20,7 +22,7 @@ navbarLinks.forEach((navbarLink) => {
 
 // CHANGE NAVBAR BACKGROUND ON SCROLL
 window.addEventListener("scroll", () => {
-  if(window.scrollY > 60) {
+  if (window.scrollY > 60) {
     nav.classList.add("scrolled");
   } else {
     nav.classList.remove("scrolled");

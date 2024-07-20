@@ -154,7 +154,8 @@ nav.scrolled {
   color: goldenrod;
 }
 
-.hero-button, .contact-button {
+.hero-button,
+.contact-button {
   background-color: goldenrod;
   color: white;
   padding: 10px 20px;
@@ -267,11 +268,12 @@ nav.scrolled {
   justify-content: center;
   align-items: center;
   text-align: center;
+  padding-bottom: 2em;
 }
 
 .contact-title {
   font-size: 3rem;
-  padding-bottom: 1em;
+  padding: 2em 0 1em 0;
   text-transform: capitalize;
 }
 
@@ -284,7 +286,7 @@ nav.scrolled {
   padding-bottom: 1em;
 }
 
-.form-group input{
+.form-group input {
   width: 50%;
   height: 40px;
   padding: 20px 40px;
@@ -301,6 +303,14 @@ nav.scrolled {
   border: 2px solid;
 }
 
+/* FOOTER SECTION */
+footer {
+  background-color: black;
+  color: white;
+  padding: 2em 0 2em 0;
+  text-align: center;
+}
+
 /* MEDIA QUERIES */
 @media screen and (max-width: 1024px) {
   .hero-title {
@@ -311,7 +321,6 @@ nav.scrolled {
     font-size: 1.5rem;
   }
 }
-
 
 @media screen and (min-width: 960px) {
   .logo h3 {
@@ -432,7 +441,6 @@ nav.scrolled {
   }
 
   .hero-title {
-    /* font-size: 3rem; */
     margin: 20px 20px;
   }
 
@@ -457,12 +465,12 @@ nav.scrolled {
   .hero-sub {
     font-size: 1rem;
   }
-  
-  .form-group input{
+
+  .form-group input {
     width: 100%;
   }
 
-  .form-group textarea{
+  .form-group textarea {
     width: 100%;
   }
 }
@@ -480,141 +488,3 @@ nav.scrolled {
     padding: 1em;
   }
 }
-
-/* TESTIMONIALS SECTION */
-/* .testimonial-section {
-  background: url(https://i.ibb.co/zG3F3CM/wood.jpg);
-  background-size: cover;
-  margin-top: 2em;
-  height: 100vh;
-  position: relative;
-  padding-inline: 8vw;
-}
-
-.testimonial-title {
-  font-size: 2rem;
-  text-align: center;
-  padding-top: 1em;
-  color: white;
-}
-
-.testimonial-quote{
-  color: white;
-  text-align: center;
-  padding: 1em 0 1em;
-}
-
-.testimonial-img{
-  display: flex;
-  justify-content: center;
-}
-
-.testimonial-img img{
-  width: 100px;
-  height: 100px;
-  border-radius: 50px;
-} */
-
-/* MEDIA QUERY SECTION */
-/* @media screen and (min-width: 768px) {
-  .hero-title {
-    font-size: 2.5rem;
-  }
-
-  .hero-sub {
-    font-size: 1.5rem;
-  }
-
-  .about-cols {
-    flex-direction: row;
-  }
-}
-
-@media screen and (min-width: 960px) {
-  .navbar {
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .mobile-menu-icon {
-    display: none;
-  }
-
-  .navbar-menu {
-    all: unset;
-    display: flex;
-    float: right;
-    align-items: center;
-    padding: 9px;
-  }
-
-  .navbar-item a {
-    pointer-events: unset;
-    font-size: 1.2rem !important;
-  }
-
-  .navbar-item button {
-    pointer-events: unset;
-  }
-
-  .navbar-item {
-    all: unset;
-  }
-
-  .navbar-logo {
-    font-size: 2.1rem;
-  }
-}
-
-@media screen and (min-width: 1024px) {
-  .hero-title {
-    font-size: 3rem;
-  }
-
-  .hero-sub {
-    font-size: 1.5rem;
-  }
-
-  #hero-text {
-    padding-top: 3em;
-  }
-
-  .about-title {
-    font-size: 3rem;
-  }
-}
-
-@media screen and (min-width: 1269px) {
-  .navbar-logo {
-    font-size: 2.5rem;
-  }
-
-  .navbar-item a {
-    font-size: 1.3rem !important;
-  }
-
-  .hero-title {
-    font-size: 3.5rem;
-  }
-}
-
-@media only screen and (max-height: 575.98px) and (orientation: landscape) {
-  .wrapper-hero {
-    height: 150vh;
-  }
-
-  .hero-section {
-    top: 100px;
-  }
-
-  .navbar-menu {
-    flex-direction: row;
-    justify-content: center;
-  }
-
-  .navbar-links {
-    font-size: 1.2rem !important;
-  }
-} */
